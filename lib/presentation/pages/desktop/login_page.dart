@@ -36,7 +36,7 @@ class _LoginPageState extends State<LoginPage> {
                         height: 100,
                       ),
                       const SizedBox(
-                        width: 470,
+                        width: 460,
                       ),
                       const Text(
                         'NAMFISA ONLINE',
@@ -76,7 +76,7 @@ class _LoginPageState extends State<LoginPage> {
                     ),
                   ),
                   const SizedBox(
-                    width: 773,
+                    width: 780,
                     child: Line(
                       height: 2,
                     ),
@@ -95,7 +95,8 @@ class _LoginPageState extends State<LoginPage> {
                   //Inner content
 
                   Container(
-                    padding: const EdgeInsets.all(10),
+                    width: 780,
+                    padding: const EdgeInsets.all(25),
                     color: const Color.fromARGB(255, 225, 221, 221),
                     child: const Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
@@ -104,12 +105,15 @@ class _LoginPageState extends State<LoginPage> {
                         Text(
                           'Namfisa Online is an on-line application that manages all of your formal communications with your regulator. Using\n\n\nNamfisa Online, you will be able to complete and submit all required forms on-line. In addition, you will be able to see\n\n\nyour companys profile - the current information held by the regulator about your company - and keep it up to date.',
                           style: TextStyle(
-                              color: Colors.black, height: 0.5, fontSize: 14),
+                              color: Colors.black, height: 0.5, fontSize: 13),
                         ),
                         Padding(
                           padding: EdgeInsets.only(top: 25.0),
                           child: Text(
-                              'To access Namfisa Online, please enter your username and password below (password is case sensitive):'),
+                            'To access Namfisa Online, please enter your username and password below (password is case sensitive):',
+                            style: TextStyle(
+                                color: Colors.black, height: 0.5, fontSize: 13),
+                          ),
                         )
                       ],
                     ),
