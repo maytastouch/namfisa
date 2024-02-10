@@ -27,7 +27,6 @@ class _LoginPageState extends State<LoginPage> {
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.start,
                 children: [
-                  //TODO:NAVBAR
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
@@ -37,7 +36,7 @@ class _LoginPageState extends State<LoginPage> {
                         height: 100,
                       ),
                       const SizedBox(
-                        width: 420,
+                        width: 470,
                       ),
                       const Text(
                         'NAMFISA ONLINE',
@@ -63,10 +62,10 @@ class _LoginPageState extends State<LoginPage> {
               padding: const EdgeInsets.symmetric(
                 horizontal: 300,
               ),
-              child: const Column(
+              child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  Padding(
+                  const Padding(
                     padding: EdgeInsets.symmetric(vertical: 8.0),
                     child: Text(
                       'Not logged in',
@@ -76,13 +75,13 @@ class _LoginPageState extends State<LoginPage> {
                       ),
                     ),
                   ),
-                  SizedBox(
-                    width: 740,
+                  const SizedBox(
+                    width: 773,
                     child: Line(
                       height: 2,
                     ),
                   ),
-                  Padding(
+                  const Padding(
                     padding: EdgeInsets.symmetric(vertical: 8.0),
                     child: Text(
                       'Welcome to Namfisa Online',
@@ -92,6 +91,29 @@ class _LoginPageState extends State<LoginPage> {
                           fontWeight: FontWeight.normal),
                     ),
                   ),
+
+                  //Inner content
+
+                  Container(
+                    padding: const EdgeInsets.all(10),
+                    color: const Color.fromARGB(255, 225, 221, 221),
+                    child: const Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        //first text
+                        Text(
+                          'Namfisa Online is an on-line application that manages all of your formal communications with your regulator. Using\n\n\nNamfisa Online, you will be able to complete and submit all required forms on-line. In addition, you will be able to see\n\n\nyour companys profile - the current information held by the regulator about your company - and keep it up to date.',
+                          style: TextStyle(
+                              color: Colors.black, height: 0.5, fontSize: 14),
+                        ),
+                        Padding(
+                          padding: EdgeInsets.only(top: 25.0),
+                          child: Text(
+                              'To access Namfisa Online, please enter your username and password below (password is case sensitive):'),
+                        )
+                      ],
+                    ),
+                  )
                 ],
               ),
             ),
