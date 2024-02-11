@@ -10,6 +10,8 @@ class LoginPage extends StatefulWidget {
 }
 
 class _LoginPageState extends State<LoginPage> {
+  bool _isHovering = false;
+  bool _isHovering2 = false;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -255,51 +257,85 @@ class _LoginPageState extends State<LoginPage> {
                                 ),
 
                                 //create login button
-                                Container(
-                                  width: 100,
-                                  height: 30,
-                                  margin: const EdgeInsets.only(left: 10),
-                                  decoration: BoxDecoration(
-                                    color: FisaColor.secondaryColor,
-                                    borderRadius: BorderRadius.circular(5),
-                                  ),
-                                  child: const Center(
-                                    child: Text(
-                                      'Login',
-                                      style: TextStyle(
-                                        color: Colors.white,
-                                        fontSize: 13,
+                                MouseRegion(
+                                  onHover: (event) {
+                                    setState(() {
+                                      _isHovering = true;
+                                    });
+                                  },
+                                  onExit: (event) {
+                                    setState(() {
+                                      _isHovering = false;
+                                    });
+                                  },
+                                  child: Container(
+                                    width: 100,
+                                    height: 30,
+                                    margin: const EdgeInsets.only(left: 14),
+                                    decoration: BoxDecoration(
+                                      color: _isHovering
+                                          ? const Color.fromARGB(
+                                              255, 77, 75, 75)
+                                          : FisaColor.secondaryColor,
+                                      borderRadius: BorderRadius.circular(5),
+                                    ),
+                                    child: const Center(
+                                      child: Text(
+                                        'Login',
+                                        style: TextStyle(
+                                          color: Colors.white,
+                                          fontSize: 13,
+                                        ),
                                       ),
                                     ),
                                   ),
-                                ),
+                                )
                               ],
                             ),
                           ),
 
                           //forgotten password
 
-                          const Padding(
-                            padding: EdgeInsets.only(top: 30.0),
-                            child: Row(
-                              children: [
-                                SizedBox(
-                                  width: 220,
-                                ),
+                          MouseRegion(
+                            onHover: (event) {
+                              setState(() {
+                                _isHovering2 = true;
+                              });
+                            },
+                            onExit: (event) {
+                              setState(() {
+                                _isHovering2 = false;
+                              });
+                            },
+                            child: Padding(
+                              padding: const EdgeInsets.only(
+                                top: 30.0,
+                                left: 6,
+                              ),
+                              child: Row(
+                                children: [
+                                  const SizedBox(
+                                    width: 220,
+                                  ),
 
-                                //create login button
-                                Center(
-                                  child: Text(
-                                    'Forgotten Password',
-                                    style: TextStyle(
-                                      //underline the text
-                                      decoration: TextDecoration.underline,
-                                      color: Colors.black,
-                                      fontSize: 13,
+                                  //create login button
+                                  Center(
+                                    child: Text(
+                                      'Forgotten Password',
+                                      style: TextStyle(
+                                        //underline the text
+                                        decoration: _isHovering2
+                                            ? TextDecoration.none
+                                            : TextDecoration.underline,
+                                        color: _isHovering2
+                                            ? FisaColor.primaryColor
+                                            : Colors.black,
+                                        fontSize: 13,
+                                      ),
                                     ),
                                   ),
-                                ),
-                              ],
+                                ],
+                              ),
                             ),
                           ),
 
