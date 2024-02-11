@@ -321,9 +321,10 @@ class _LoginPageState extends State<LoginPage> {
                             padding: EdgeInsets.only(
                               top: 25.0,
                               bottom: 30,
+                              left: 25,
                             ),
                             child: Text(
-                              '• We support the most recent versions of the following browsers; Microsoft Edge, Firefox, Google Chrome, and Safari.\n\n\n• For viewing your forms in PDF (and printing where signatures are required) you will need a PDF viewer, such as Adobe\n\n\n   Acrobat.\n\n\n• Forms can be exported as spreadsheets. For this you will need Microsoft Excel.\n\n\n• I connection to a printer so you can print out hard copies of forms.\n\n\n• We also recommend that your screen resolution iS at least 1920 x1080 or higher for optimal display.',
+                              '• We support the most recent versions of the following browsers; Microsoft Edge, Firefox, Google Chrome, and Safari.\n\n\n• For viewing your forms in PDF (and printing where signatures are required) you will need a PDF viewer, such as\n\n\n  Adobe Acrobat.\n\n\n• Forms can be exported as spreadsheets. For this you will need Microsoft Excel.\n\n\n• I connection to a printer so you can print out hard copies of forms.\n\n\n• We also recommend that your screen resolution iS at least 1920 x1080 or higher for optimal display.',
                               style: TextStyle(
                                   color: Colors.black,
                                   height: 0.5,
