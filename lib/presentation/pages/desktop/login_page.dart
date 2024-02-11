@@ -22,7 +22,6 @@ class _LoginPageState extends State<LoginPage> {
           children: [
             //first container
             SingleChildScrollView(
-              physics: const NeverScrollableScrollPhysics(),
               scrollDirection: Axis.horizontal,
               child: Container(
                 padding: const EdgeInsets.symmetric(
@@ -60,7 +59,6 @@ class _LoginPageState extends State<LoginPage> {
 
             //second container
             SingleChildScrollView(
-              physics: const NeverScrollableScrollPhysics(),
               scrollDirection: Axis.horizontal,
               child: Container(
                 padding: const EdgeInsets.symmetric(
