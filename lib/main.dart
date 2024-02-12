@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:namfisa/presentation/pages/desktop/login_page.dart';
+
+import 'presentation/layout.dart';
 
 void main() {
   runApp(const MyApp());
@@ -17,7 +18,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: const LoginPage(),
+      home: const Layout(),
     );
   }
 }
